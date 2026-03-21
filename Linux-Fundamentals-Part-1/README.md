@@ -19,18 +19,21 @@ This room covers the basics of Linux including navigation, file system structure
 | whoami | Find out what user we're currently logged in as |
 | pwd | print working directory |
 
-## Search for files
+| Command | Purpose |
+|--------|--------|
+| `find -name file.txt` | Finds the location of a file when the exact name is known |
+| `find *.txt` | Finds files when only the extension is known |
+| `grep "word" filename` | Searches for specific text (patterns) inside a file |
 
-| find -name file.txt | finds the location of the file | (when file name is known)
-| find *.txt | (when only extention is known)
-| grep | search for specific text (patterns) inside files | grep "word" filename
 
 ## Shell Operators
 Shell operators are special symbols in Linux used to control how commands execute and how their input or output is handled.
 
-| & | This operator allows you to run commands in the background of your terminal | sleep 10 & | (sleep 10 usually takes 10 seconds, but with & operator it will run in the background)
-| && | to make a list of commands to run | ls && pwd | (pwd will take place only after ls )
-| > | output redirector | (echo hey > note.txt)
-| >> | appends the output rather than replacing | ( echo hi >> note.txt)
+| Operator | Purpose |
+|----------|--------|
+| `&` | Runs a command in the background (e.g., `sleep 10 &`) |
+| `&&` | Runs multiple commands sequentially (next runs only if previous succeeds) |
+| `>` | Redirects output to a file (overwrites existing content) |
+| `>>` | Appends output to a file (does not overwrite existing content) |
 
 
