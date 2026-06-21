@@ -92,4 +92,10 @@ Windows 11 is the current desktop operating system from Microsoft.
 
 The server version of Windows is designed for enterprise environments and data centers. The current version is Windows Server 2025.
 
+WINDOWS DISPLLAY
+
+IMP
+1) Hovering over the icon will provide a preview thumbnail, along with a tooltip. This  tooltip is handy if you have many apps/programs open, such as Google Chrome, and you wish to find which instance of Google Chrome is the one you need to bring in to focus.
+2) 
+
 
