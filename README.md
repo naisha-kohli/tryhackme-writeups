@@ -1,10 +1,5 @@
 # TryHackMe Writeups
 
 This repository contains structured write-ups of rooms completed on TryHackMe.
+Currently doing Cybersecurity 101.
 
-## Completed Rooms
-
-- Linux Fundamentals Part 1
-- Linux Fundamentals Part 2
-- Linux Fundamentals Part 3
-  
