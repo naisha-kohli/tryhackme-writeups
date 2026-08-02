@@ -42,16 +42,7 @@ Reasons:
 After support ended, Windows 7 no longer received security updates, making it increasingly vulnerable to cyberattacks.
 
 ---
-
-## Windows 8 and 8.1
-
-Windows 8 introduced a tile-based interface designed for touchscreen devices. Many desktop users found the new interface confusing and difficult to use.
-
-Although Windows 8.1 improved the experience, the operating system never became as popular as Windows 7 and was eventually replaced by Windows 10.
-
----
-
-## Windows 10
+# Windows 10
 
 Windows 10 addressed many of the criticisms of Windows 8 and became the standard operating system for businesses and home users.
 
@@ -72,12 +63,6 @@ Microsoft announced that Windows 10 support will end on October 14, 2025.
 ## Windows 11
 
 Windows 11 is the current desktop operating system from Microsoft.
-
-### Editions
-
-* Windows 11 Home
-* Windows 11 Pro
-
 ### Features
 
 * Modern user interface
@@ -88,14 +73,163 @@ Windows 11 is the current desktop operating system from Microsoft.
 
 ---
 
-## Windows Server
+## Windows File System (NTFS)
 
-The server version of Windows is designed for enterprise environments and data centers. The current version is Windows Server 2025.
+### NTFS (New Technology File System)
+- NTFS stands for **New Technology File System**.
+- It is the default file system used in modern Windows operating systems.
+- Before NTFS, Windows used:
+  - **FAT16/FAT32** – File Allocation Table
+  - **HPFS** – High Performance File System
 
-WINDOWS DISPLLAY
+### Advantages of NTFS
+- Supports files larger than **4 GB**.
+- Can automatically repair file system errors using information stored in its **log file**.
+- Allows **file and folder permissions**.
+- Supports **compression** to save disk space.
+- Supports **Encrypting File System (EFS)** for protecting data.
 
-IMP
-1) Hovering over the icon will provide a preview thumbnail, along with a tooltip. This  tooltip is handy if you have many apps/programs open, such as Google Chrome, and you wish to find which instance of Google Chrome is the one you need to bring in to focus.
-2) 
+### NTFS Permissions
+- Full Control
+- Modify
+- Read & Execute
+- List Folder Contents
+- Read
+- Write
+
+### Alternate Data Streams (ADS)
+**Alternate Data Streams (ADS)** allow a file to contain **hidden additional data without changing the file's main content or filename**.
+
+Example:
+A file named `notes.txt` can secretly have another hidden stream attached to it that is not visible in File Explorer.
+
+**Easy way to remember:**  
+**ADS = Extra hidden data attached to a file.**
+
+## Windows System32 Folder
+
+### Windows Folder
+- The **Windows** folder is usually located at:
+  ```
+  C:\Windows
+  ```
+- It contains the files required for the **Windows operating system**.
+- Although it is commonly stored on the **C:** drive, it can also be installed on another drive or location.
+- The system environment variable for the Windows directory is:
+  ```
+  %windir%
+  ```
+
+### System32 Folder
+- **System32** is one of the most important folders inside the Windows directory.
+- It contains **critical system files** required for Windows to function properly.
+- Deleting or modifying files in the **System32** folder can make the operating system **unstable or even unable to boot**.
+
+- ## User Accounts, Profiles, and Permissions
+
+### Types of Local User Accounts
+
+#### 1. Administrator
+- Has **full control** over the system.
+- Can:
+  - Add or delete user accounts.
+  - Modify user groups.
+  - Change system settings.
+  - Install or uninstall software.
+  - Access and manage all files and folders.
+
+#### 2. Standard User
+- Has **limited permissions**.
+- Can:
+  - Use installed applications.
+  - Create, edit, and delete their own files and folders.
+  - Change some personal settings.
+- **Cannot:**
+  - Install most software that affects the whole system.
+  - Add or delete user accounts.
+  - Change important system settings.
+
+### Managing Local Users and Groups
+
+You can view and manage local user accounts using **Local Users and Groups**.
+
+**Steps:**
+1. Press **Win + R** to open the **Run** dialog.
+2. Type:
+   ```
+   lusrmgr.msc
+   ```
+3. Press **Enter**.
+4. The **Local Users and Groups** window will open, where you can:
+   - View local user accounts.
+   - Create or delete users.
+   - Manage user groups.
+   - Modify user account properties.
+
+
+
+**Easy way to remember:**  
+**`lusrmgr.msc` = Local Users and Groups Manager.**
+
+## User Account Control (UAC)
+
+### What is UAC?
+**User Account Control (UAC)** is a Windows security feature that helps prevent **unauthorized changes** to the system.
+
+### Why is UAC needed?
+- Basic tasks like:
+  - Browsing the internet
+  - Using Microsoft Word
+  - Watching videos
+  - Editing personal files
+
+  **do not require administrator privileges.**
+
+- However, tasks like:
+  - Installing software
+  - Changing system settings
+  - Modifying Windows files
+
+  **require elevated (administrator) privileges.**
+
+Without UAC, if malware infects a computer while you're logged in as an administrator, it could make system-wide changes without asking for permission.
+
+### How UAC Works
+- Even if you log in with an **Administrator** account, Windows does **not** run everything with full administrator privileges.
+- When an action requires higher privileges, Windows displays a **UAC prompt** asking for confirmation.
+- The action only proceeds if the user approves it.
+
+> **Note:** UAC does **not** apply to the built-in **Administrator** account because it already runs with full privileges.
+
+### Example
+Suppose you download and install **Google Chrome** or **Visual Studio Code**.
+
+When you run the installer, Windows displays a message like:
+
+> **"Do you want to allow this app to make changes to your device?"**
+
+If you click **Yes**, Windows temporarily grants administrator privileges to complete the installation.
+
+### Easy way to remember
+**UAC = Windows asks, "Are you sure?" before allowing important system changes.**
+
+## Task Manager
+
+**Keyboard Shortcut:**
+```
+Ctrl + Shift + Esc
+```
+
+### What is Task Manager?
+Task Manager is a Windows utility used to **monitor and manage running applications, processes, and system performance**.
+
+### Information Available
+- Running apps and background processes
+- CPU, Memory, Disk, Network, and GPU usage
+- Startup applications
+- Logged-in users
+- Running services
+
+
 
 
