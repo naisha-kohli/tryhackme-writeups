@@ -1,4 +1,4 @@
-# TryHackMe — Web Application Basics
+ Web Application Basics
 
 ## 1. Web Application Overview
 
